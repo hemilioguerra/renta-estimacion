@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>Formulario</title></head>
+<body>
+    <h1>Introduce tus datos</h1>
+    <form action="/result" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="option" value="{{ option }}">
+        {% if option == 'subir' %}
+            <label>Sube tu borrador (PDF):</label><br>
+            <input type="file" name="borrador_pdf"><br><br>
+        {% endif %}
+        Comunidad Autónoma: <input name="comunidad"><br>
+        ¿Tienes hijos? ¿Cuántos?: <input name="hijos"><br>
+        Salario bruto anual: <input name="salario"><br>
+        Nº de pagadores: <input name="pagadores"><br>
+        Edad: <input name="edad"><br>
+        ¿Pagas alquiler? (sí/no): <input name="alquiler"><br>
+        ¿Tienes hipoteca? (sí/no): <input name="hipoteca"><br>
+        ¿Tienes discapacidad? (sí/no): <input name="discapacidad"><br>
+        Aportaciones a planes de pensiones: <input name="pension"><br><br>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>
